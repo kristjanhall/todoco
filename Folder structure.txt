@@ -1,0 +1,29 @@
+Folder structure
+
+client									clientside stuff
+	stylesheets							stylesheets for forntend
+	views								view in MVC
+		modules							Pack everything in modules
+			moduleName
+				moduleName.html
+				moduleName.js			JS for this module only
+	router
+		routes.js 						Client side JS
+
+
+server 									Server stuff
+	connectors
+		connector.js					Holds client to server methods
+
+	fixtures 							Define all fixture handling here
+		inital.js
+
+	publisher 							Handel all server side collection publish,subscribe here
+		publish.js 						All rules regarding publishing of data
+		collections.js 					Definitions of all collections
+
+library 								General purpose helpers
+	helpers.js
+
+public
+	img

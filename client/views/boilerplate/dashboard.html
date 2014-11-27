@@ -1,0 +1,31 @@
+<template name="dashboard">
+
+	<hr style="border-style:hidden" />
+	<div class="container">
+		<!-- <button class="btn btn-default">Add new task</button> -->
+		<button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#newTask">Add new task</button>
+		<p class="add-on">Green lines indiecade tasks that have been resolved</p>
+	</div>
+	<div class="container content">
+
+		<table class="table tasks">
+			<thead>
+				<tr>
+					<th style="width:15%">Created at</th>
+					<th style="width:15%">Due date</th>
+					<th style="width:25%">Task name</th>
+					<th style="width:15%">Created by</th>
+					<th style="width:15%">Assigned to</th>
+					<th style="width:15%"></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each tasks}}
+				{{> task}}
+				{{/each}}
+			</tbody>
+		</table>
+		{{> newTask}}
+		{{> taskDetail}}
+	</div>
+</template>

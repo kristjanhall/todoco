@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOcoDO</title>
+
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<div class="container-fluid">
+			<h1>TODO<small>collectively</small></h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="md-col-12">
+				<strong>View by</strong>: 
+				<span class="label label-default">Owned by me</span>
+				<span class="label label-default">Resolved</span>
+				<span class="label label-default">Unresolved</span>
+				<span class="label label-default">Pending approval</span>
+				<span class="label label-default">Declined</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

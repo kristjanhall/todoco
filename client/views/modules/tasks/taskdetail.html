@@ -1,0 +1,78 @@
+<template name="taskDetail">
+	{{#with taskDetail}}
+	<div class="modal fade" id="taskDetail" tabindex="-1" role="dialog" aria-labelledby="addTask" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="addTask">{{taskName}} <small>{{dueDate}}</small></h4>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label class="control-label" for="dueDate">Task description</label>
+						<p>
+							{{! here goes the description of the task}}
+							{{longDesc}}
+						</p>
+					</div>
+
+					{{! if this user is assigned to this task we must let him post a resolution }}
+					{{! but if a resolution has been posted this should only be viewable }}
+					{{#if resolved}}
+					<div class="spacer"></div>
+					<div class="form-group resolution">
+						<label class="control-label" for="dueDate">Posted resolution</label>
+						<p class="">
+							{{resolution}}
+						</p>
+						<span class="add-on">Resolved {{resolvedAt}} by <strong>{{assignedTo}}</strong></span>
+					</div>
+					{{else}}
+						{{#if mine}}
+						<div class="spacer"></div>
+
+						<div class="form-group">
+							<label class="control-label" for="resolution">Done? Post a resolution...</label>
+							<textarea id="resolution" name="resolution" class="form-control" rows="5" maxlength="300" data-max="300"></textarea>
+							<span class="add-on">Give a description of how you have solved this task</span> - 
+							<span class="add-on"><span class="charCount">300</span> chars left</span>
+						</div>
+						<button class="btn btn-sm btn-success postResolution">Post resolution</button>
+						{{/if}}
+					{{/if}}
+
+					<div class="form-group">
+						{{#if resolved}}
+							{{! we do not want users to be able to alter resolved tasks }}
+						{{else}}
+							<div class="spacer"></div>
+							{{#if mine}}
+								<button class="btn btn-sm btn-danger unassignTask" data-id="{{_id}}">Unassign me!</button>
+							{{else}}
+								{{#if none}}
+									<button class="btn btn-sm btn-info assignTask" data-id="{{_id}}">Assign me!</button>
+								{{else}}
+									<strong><small>This task is assigned to</small> {{assignedTo}}</strong>
+								{{/if}}
+							{{/if}}
+
+							{{#if me}}
+								<div style="float:right">
+									<button class="btn btn-sm btn-danger deleteTask" data-id="{{_id}}">Delete task!</button>
+								</div>
+							{{/if}}
+						{{/if}}
+					</div>
+					<div class="modal-footer">
+						<div class="form-group">
+							<small>Created {{createdDate}} by <strong>{{createdBy}}</strong></small>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/with}}
+</template>

@@ -1,0 +1,23 @@
+Shared todo list
+-----------------------------------
+
+1. Admin can add users						This might be done through mongodb interface or anything else
+2. Users can start tasks					Done through interface
+	- User owns tasks 						Can view owned tasks
+3. Users can resolve tasks					Done through interface, must give a comment on how task was resolved
+	- Owner must approve or decline			Done through interface, decline with comment, store resolve history, respan task
+4. Users can view
+	Unresolved tasks 						Here we should have links to declined resolves, if any
+	Resolved tasks
+	Tasks owned
+	Declined resolves						Here we should have links to new spans, resolved or not
+
+5. Each task should have
+	id
+	short description
+	long description
+	created by
+	created on
+	do date
+
+6. Only registered users can login

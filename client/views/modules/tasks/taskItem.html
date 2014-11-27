@@ -1,0 +1,49 @@
+<template name="task">
+	<tr class="taskItem {{#if resolved}}resolved{{/if}}" data-id="{{_id}}">
+		<td>{{createdDate}}</td>
+		<td>{{dueDate}}</td>
+		<td>{{taskName}}</td>
+		<td>
+			{{#if me}}
+				<strong style="color:red">Me</strong>
+			{{else}}
+				{{createdBy}}
+			{{/if}}
+		</td>
+		<td>
+			{{#if resolved}}
+				<span title="This task was resolved by {{assignedTo}}">{{assignedTo}}</span>
+			{{else}}
+				{{#if mine}}
+					<button class="btn btn-sm btn-danger unassignTask" data-id="{{_id}}">Unassign me!</button>
+				{{else}}
+					{{#if none}}
+						<button class="btn btn-sm btn-info assignTask" data-id="{{_id}}">Assign me!</button>
+					{{else}}
+						{{assignedTo}}
+					{{/if}}
+				{{/if}}
+			{{/if}}
+		</td>
+		<td>
+
+			{{#if resolved}}
+				<span class="label label-success">R</span>
+			{{else}}
+				<span class="label label-info">U</span>
+				{{#if isDue}}
+				<span class="label label-warning">D</span>
+				{{else}}
+					{{#if pastDue}}
+					<span class="label label-danger">P</span>
+					{{/if}}
+				{{/if}}
+			{{/if}}
+
+			{{#if me}}
+			<span class="label label-primary">M</span>
+			{{/if}}
+
+		</td>
+	</tr>
+</template>

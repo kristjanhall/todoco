@@ -1,0 +1,145 @@
+/*
+ * HTML DOCUMENT STUFF
+ *
+ * why so !important - because we want to use Bootstrap styles, but we do want to tweak some of it
+ *
+ */
+
+
+body { margin-top: 60px; margin-bottom: 60px;}
+footer { width: 100%; height: 50px; padding: 10px; color: #807470; background-color: #efefef; box-shadow: 0px -2px 4px #DDD; }
+
+
+/*
+ * LAYOUT STUFF
+ */
+.sticky-bottom { position: fixed; bottom: 0; }
+.float-right { float: right; }
+.spacer { height: 2em; }
+.header + .container {
+	position: relative;
+	padding: 1em;
+	border-radius: 4px;
+	background-color: #F5F5F5;
+	box-shadow: 0px 2px 2px #999;
+}
+.flex-row { display:flex; justify-content: center; }
+.split { border-left: solid thin #666; margin: 0 10px; }
+a { text-decoration: none !important; }
+a:hover { color: #9999FF; }
+
+/*
+ * STYLE STUFF
+ * relating to header template
+ */
+.taskItem { cursor: pointer; }
+.modal-dialog {
+	position: absolute;
+	top:40%; left: 50%;
+	transform: translate(-50%, -50%) !important;
+}
+.task:hover { text-shadow: 0px 0px 1px #CCCCFF; }
+.modal-header { background-color: #efefef; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+.modal-header h4 { font-size: 1.5em !important; text-transform: uppercase; font-weight: bolder !important; }
+.resolved { background-color: #DEFFED !important; color: #999 !important; }
+.add-on { text-align: left !important; padding: 10px 0px !important; }
+.resolution { background-color: #EEEEFF; border-radius: 4px; padding: 5px; }
+.about { color: #555; width: 100% !important; background-color: #F9F9F9 !important; text-align: justify; }
+.about h1 { margin-bottom: 0.6em; }
+.about .container div p { font-size: 1em !important; }
+.slogan { cursor: pointer; }
+
+
+/*
+ * HEADER STUFF
+ * relating to header template
+ */
+ .todoco .header div { display: inline-block; }
+ .todoco .header h1 { text-align: left !important; font-size: 2.5em !important; }
+
+
+/*
+ * NAV STUFF
+ * relating to nav template
+ */
+.todoco .navi { }
+.todoco .navi span { display: inline-block; }
+.todoco .navi .heading { font-weight: bolder !important; font-size: 1.2em; color:#777; margin-top: 10px; display: block; }
+.todoco .navi .btn { min-width: 8em; margin-top: 4px; }
+.todoco .navi .btn {
+	/*dim the bootstrap colors just a litle bit*/
+	-webkit-filter: grayscale(0.6);
+}
+.todoco .navi .active {
+	/*background-color: #999999 !important;*/
+	/*color: #EFEFEF;*/
+	/*box-shadow: none !important;*/
+	-webkit-filter: grayscale(1);
+}
+#logout { cursor: pointer; padding:5px 10px; border-radius: 4px; background-color: #efefef; box-shadow: 0px 0px 2px #777 }
+#logout:hover { background-color: #e5e5e5; }
+
+
+
+/*
+ * LOGIN STUFF
+ *
+ */
+
+ .login_background {
+ 	position: absolute;
+ 	top:0; left:0;
+ 	height: 100%; width: 100%;
+ 	background: url('img/img.jpg');
+ 	background-repeat: no-repeat;
+ 	background-size: cover
+ }
+.header { margin-bottom: 3em; }
+.header h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 4em;
+	font-weight: bolder !important;
+	padding-bottom: 1em;
+	color: #504440;
+
+	margin: 0 !important;
+	padding: 0;
+ }
+ .header span {
+ 	display: block;
+ 	text-transform: uppercase;
+ 	text-align: center;
+ }
+.loginForm {
+	position: absolute;
+	left: 50%; top: 40%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	padding: 20px;
+	border-radius: 4px;
+}
+.add-on { font-size: 0.8em; color:#707070; padding-top: 2em; text-align: center}
+.login-error { text-align: center; padding-top: 1em; font-weight: bolder; color: #AA4444; font-size: 1.5em; }
+.login-cover div { position: absolute; top:40%; left: 50%; transform: translate(-50%,-50%); }
+.login-cover div:first-of-type { top: 30%; }
+.login-cover {
+	font-size: 3em;
+	font-weight: bolder;
+	color: rgba(120,120,120,0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #efefef;
+}
+
+
+
+/*
+ * MAIN CONTENT
+ */
+.content {
+	margin-top: 20px;
+}

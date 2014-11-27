@@ -1,0 +1,40 @@
+<template name="newTask">
+	<div class="modal fade" id="newTask" tabindex="-1" role="dialog" aria-labelledby="addTask" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="addTask">Add a task</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form" id="form_newTask">
+						<fieldset>
+							<div class="form-group">
+								<label class="control-label" for="taskName">Task name</label>
+								<input id="taskName" name="taskName" type="text" placeholder="Task name..." class="input-xlarge form-control" maxlength="30" data-max="30"  autofocus>
+								<p class="add-on"><span class="charCount">30</span> chars left</p>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="control-label" for="longDesc">Task description</label>                     
+								<textarea id="longDesc" name="longDesc" class="form-control" rows="5" maxlength="300" data-max="300"></textarea>
+								<p class="add-on"><span class="charCount">300</span> chars left</p>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="control-label" for="dueDate">Due date</label>
+								<input id="dueDate" name="dueDate" type="date" placeholder="placeholder" class="input-xlarge form-control">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" id="resetModal" data-dismiss="modal">Cancel</button>
+								<button type="submit" class="btn btn-primary" id="addNewTask">Save</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
